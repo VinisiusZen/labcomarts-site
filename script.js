@@ -98,8 +98,9 @@
   form?.addEventListener('submit', e => {
     e.preventDefault();
     const fd = new FormData(form);
-    const subject = encodeURIComponent('Participação — Índice de Maturidade e Valor da IA');
-    const body = encodeURIComponent(`Nome: ${fd.get('nome') || ''}\nEmpresa: ${fd.get('empresa') || ''}\nE-mail: ${fd.get('email') || ''}\n\n${fd.get('mensagem') || 'Quero participar da pesquisa.'}`);
+    const subject = encodeURIComponent(form.dataset.subject || 'Participação — Índice de Maturidade e Valor da IA');
+    const fallback = form.dataset.fallback || 'Quero participar da pesquisa.';
+    const body = encodeURIComponent(`Nome: ${fd.get('nome') || ''}\nEmpresa: ${fd.get('empresa') || ''}\nE-mail: ${fd.get('email') || ''}\n\n${fd.get('mensagem') || fallback}`);
     location.href = `mailto:contato@labcomarts.com?subject=${subject}&body=${body}`;
   });
 })();
