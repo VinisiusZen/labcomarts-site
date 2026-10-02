@@ -22,6 +22,9 @@ a{color:inherit} img,video{display:block;max-width:100%} button,input,textarea{f
 
 .page-shell,.text-block,.contact,.people-strip,.study-strip,.footer-inner,.profile-shell,.study-shell{width:calc(100% - var(--pad)*2);margin-inline:auto}
 
+/* static brand poster, top of page */
+.brand-poster{width:100%;height:100svh;overflow:hidden;background:#fff}.brand-poster img{width:100%;height:100%;object-fit:cover;object-position:center}
+
 /* scroll film */
 .scroll-film{height:560vh;position:relative;background:#fff}.film-sticky{position:sticky;top:0;height:100svh;overflow:hidden;background:#fff}.film-sticky video{width:100%;height:100%;object-fit:contain;object-position:50% 50%;background:#fff}.film-vignette{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,transparent 78%,rgba(255,255,255,.48))}.scroll-hint{position:absolute;left:50%;bottom:calc(18px + env(safe-area-inset-bottom));transform:translateX(-50%);width:22px;height:34px;border:1px solid rgba(18,16,15,.25);border-radius:99px}.scroll-hint span{position:absolute;width:4px;height:4px;border-radius:50%;background:var(--orange);left:8px;top:6px;animation:scrollDot 1.8s ease-in-out infinite}.scroll-film.has-scrolled .scroll-hint{opacity:0}@keyframes scrollDot{0%{transform:translateY(0);opacity:.15}35%{opacity:1}100%{transform:translateY(16px);opacity:0}}
 
