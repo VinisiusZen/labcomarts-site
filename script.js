@@ -11,7 +11,7 @@
   // in CSS, JS only scrubs currentTime. No JS-driven pin/position toggling.
   const film = document.querySelector('.scroll-film');
   const video = document.getElementById('heroVideo');
-  let duration = 6.016;
+  let duration = 32.9;
   let videoTicking = false;
 
   const setDuration = () => {
